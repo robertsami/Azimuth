@@ -500,10 +500,7 @@ def predict(seq, aa_cut=-1, percent_peptide=-1, model=None, model_file=None, pam
         assert isinstance(aa_cut[0], (int, long))
     assert isinstance(percent_peptide, (int, long, np.ndarray)), "Please ensure percent_peptide is a numpy array"
     if isinstance(percent_peptide, np.ndarray) and len(percent_peptide) > 0:
-        assert isinstance(percent_peptide[0], (int, long))
-        
-    
-    
+        assert isinstance(percent_peptide[0], (float, int, long))
     
     print aa_cut, percent_peptide
     if model_file is None:
